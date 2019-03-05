@@ -19,7 +19,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
             do
             {
                 // Lit le fichier ligne par ligne comme un tableau composé de chaines de caractères
-                tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\MyRepository\M-Exercices - Algorithmie - Codage (TP6)\Fichier Clients.csv");
+                tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\PublicTests_CSharp\M-Exercices - Algorithmie - Codage (TP6)\Clients.csv");
 
                 // Récupération du fichier dans 4 tableaux unidimensionnels
                 tNumCli = tFichier[0].Split(',');
@@ -141,20 +141,6 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         {
                             Console.WriteLine("   On ne peut livrer chez le client n°{0} en {1} --> Mais en {2} c'est possible !",
                                 numCli, moisInterdit, ConversionMois(saisie));
-                            Console.WriteLine(Environment.NewLine);
-
-                            int j = 0;
-                            while (j < tNumCli.Length)
-                            {
-                                if (tNumCli[j] == numCli)
-                                {
-                                     = tNom[j]);
-                                }
-                                i++;
-                            }
-                            Console.WriteLine(" ------------------------------------------");
-                            // Console.WriteLine(" | Vous pourrez livrer {0} un {1} en {2}. |", ooo, ooo, ConversionMois(saisie));
-                            Console.WriteLine(" ------------------------------------------");
                             Console.WriteLine(Environment.NewLine);
                         }
                     }
