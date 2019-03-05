@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP6)", "M-Exercices - Algorithmie - Codage (TP6)\M-Exercices - Algorithmie - Codage (TP6).csproj", "{78EBA1B8-AB68-47F5-BA67-2294AE0455E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP6) Tests Avancés", "..\M-Exercices - Algorithmie - Codage (TP6) Tests Avancés\M-Exercices - Algorithmie - Codage (TP6) Tests Avancés.csproj", "{2AA5734E-635D-44B9-8F74-6CE12825A13E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78EBA1B8-AB68-47F5-BA67-2294AE0455E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78EBA1B8-AB68-47F5-BA67-2294AE0455E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78EBA1B8-AB68-47F5-BA67-2294AE0455E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78EBA1B8-AB68-47F5-BA67-2294AE0455E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDAD1FAB-749B-4975-83EF-A5B6A8793FB4}
+	EndGlobalSection
+EndGlobal
