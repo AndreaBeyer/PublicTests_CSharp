@@ -17,7 +17,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
         static void Main(string[] args)
         {
             // Lit le fichier ligne par ligne comme un tableau composé de chaines de caractères
-            tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\MyRepository\M-Exercices - Algorithmie - Codage (TP6)\Fichier Clients.csv");
+            tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\PublicTests_CSharp\M-Exercices - Algorithmie - Codage (TP6)\Clients.csv");
             // Avec la fonction csharp native ReadAllLines le fichier est automatiquement refermé à la fin de la lecture ? Moi j'ai envie d'y croire. Et vous ? <je sors>
 
             // Récupération du fichier dans 4 tableaux unidimensionnels

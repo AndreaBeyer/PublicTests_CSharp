@@ -9,17 +9,25 @@ namespace M_Exercices_Algorithmie_Codage_TP6
     class Program
     {
         // Déclarations publiques
-        static string saisie, numCli, jourInterdit, moisInterdit;
-        static string[] tFichier, tNumCli, tNomCli, tJourSemaine, tMois;
-        static ConsoleKey s = ConsoleKey.O;
+        static string saisie, numCli, nomCli, jourInterdit, moisInterdit, jourChoisi;
 
         // Procédure principale
         static void Main(string[] args)
-        { 
+        {
+
+            // A DEBUGER !!! //
+            
+            // Déclarations
+            ConsoleKey s = ConsoleKey.O;
+            string moisChoisi;
+
             do
             {
+                // Déclarations
+                string[] tFichier, tNumCli, tNomCli, tJourSemaine, tMois;
+
                 // Lit le fichier ligne par ligne comme un tableau composé de chaines de caractères
-                tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\PublicTests_CSharp\M-Exercices - Algorithmie - Codage (TP6)\Clients.csv");
+                tFichier = System.IO.File.ReadAllLines(@"C:\Users\CRM\Documents\Git HUB\MyRepository\M-Exercices - Algorithmie - Codage (TP6)\Clients.csv");
 
                 // Récupération du fichier dans 4 tableaux unidimensionnels
                 tNumCli = tFichier[0].Split(',');
@@ -47,12 +55,13 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         {
                             // Le retenir.
                             numCli = saisie;
+                            nomCli = tNomCli[i];
                         }
                         i++;
                     }
                     if (String.IsNullOrEmpty(numCli))
                     {
-                        Console.WriteLine("   Ce client n'existe pas !");
+                        Console.WriteLine("\t Ce client n'existe pas !");
                     }
                 }
                 while (String.IsNullOrEmpty(numCli));
@@ -73,7 +82,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         {
                             if (tNumCli[i] == numCli)
                             {
-                                jourInterdit = ConversionJour(tJourSemaine[i]);
+                                jourInterdit = Jour(tJourSemaine[i]);
                             }
                             i++;
                         }
@@ -81,26 +90,27 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         // Si le jour choisi est le jour de la semaine interdit,
                         if (saisie == jourInterdit)
                         {
-                            Console.WriteLine("   On ne peut livrer chez le client n°{0} le {1} --> Veuillez chosir un autre jour.",
-                                numCli, jourInterdit);
+                            Console.WriteLine("   On ne peut livrer chez {0} le {1}. Veuillez chosir un autre jour.",
+                                nomCli, jourInterdit);
                         }
                         // S'il n'y a pas de jour interdit,
                         else if (String.IsNullOrEmpty(jourInterdit))
                         {
-                            Console.WriteLine("   Tous les jours ouvrés sont disponibles.");
+                            Console.WriteLine("   On peut livrer chez {0} tous les jours ouvrés.");
                         }
                         // S'il y a un jour interdit, mais que le jour choisi est différent,
                         else
                         {
-                            Console.WriteLine("   On ne peut livrer chez le client n°{0} le {1} --> Mais le {2} c'est possible !",
-                                numCli, jourInterdit, ConversionJour(saisie));
+                            Console.WriteLine("   On peut livrer chez {0} le {1} (NB: Ce n'est pas possible le {2}.)",
+                                nomCli, Jour(saisie), jourInterdit);
                             Console.WriteLine(Environment.NewLine);
+                            jourChoisi = Jour(saisie);
                         }
                     }
                     // Si l'indice du jour de la semaine choisi pour la livraison n'est pas un chiffre, est inférieur à 1, ou excéde 6,
                     else
                     {
-                        Console.WriteLine("   L'indice du jour de la semaine doit être compris entre 1 et 6 !");
+                        Console.WriteLine("   L'indice du jour de la semaine ne peut aller que 1 à 6.");
                     }
                 }
                 while (!int.TryParse(saisie, out int indiceJourBis) || indiceJourBis < 1 || indiceJourBis > 6);
@@ -120,7 +130,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         {
                             if (tNumCli[i] == numCli)
                             {
-                                moisInterdit = ConversionMois(tMois[i]);
+                                moisInterdit = Mois(tMois[i]);
                             }
                             i++;
                         }
@@ -128,42 +138,54 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         // Si le mois choisi est le mois interdit,
                         if (saisie == jourInterdit)
                         {
-                            Console.WriteLine("On ne peut livrer chez le client n°{0} en {1} --> Veuillez chosir un autre mois.",
-                                numCli, jourInterdit);
+                            Console.WriteLine("On ne peut livrer chez {0} en {1}. Veuillez chosir un autre mois.",
+                                nomCli, jourInterdit);
                         }
                         // S'il n'y a pas de mois interdit,
                         else if (String.IsNullOrEmpty(jourInterdit))
                         {
-                            Console.WriteLine("   Tous les mois sont disponibles.");
+                            Console.WriteLine("   On peut livrer chez {0} tous les mois.");
+                            Console.WriteLine(Environment.NewLine);
+
+                            moisChoisi = Mois(saisie);
+                            Console.WriteLine("\t === Vous pourrez livrer {0} un {1} en {2}. === ",
+                                nomCli, jourChoisi, moisChoisi);
+                            Console.WriteLine(Environment.NewLine);
                         }
                         // S'il y a un mois interdit, mais que le mois choisi est différent,
                         else
                         {
-                            Console.WriteLine("   On ne peut livrer chez le client n°{0} en {1} --> Mais en {2} c'est possible !",
-                                numCli, moisInterdit, ConversionMois(saisie));
+                            Console.WriteLine("   On peut livrer chez {0} en {1} (NB: Ce n'est pas possible en {2}.)",
+                                nomCli, Mois(saisie), moisInterdit);
                             Console.WriteLine(Environment.NewLine);
+
+                            moisChoisi = Mois(saisie);
+                            Console.WriteLine("\t === Vous pourrez livrer {0} un {1} en {2}. === ", 
+                                nomCli, jourChoisi, moisChoisi);
+                            Console.WriteLine(Environment.NewLine);
+
                         }
                     }
                     // Si le mois choisi pour la livraison n'est pas un chiffre, est inférieur à 1, ou excéde 12,
                     else
                     {
-                        Console.WriteLine("   L'indice du mois doit être compris entre 1 et 12 !");
+                        Console.WriteLine("   L'indice du mois ne peut aller que de 1 à 12.");
                     }
                 }
                 while (!int.TryParse(saisie, out int indiceMoisBis) || indiceMoisBis < 1 || indiceMoisBis > 12);
 
-                Console.WriteLine("   Voulez-vous effectuer une autre analyse (O/N)");
+                Console.WriteLine("\t Voulez-vous effectuer une autre analyse (O/N)");
                 s = Console.ReadKey().Key;
                 Console.WriteLine(Environment.NewLine);
 
                 while (s != ConsoleKey.O && s != ConsoleKey.N)
                 {
                     Console.Clear();
-                    Console.WriteLine("   Voulez-vous effectuer une autre analyse (O/N)");
+                    Console.WriteLine("\t Voulez-vous effectuer une autre analyse (O/N)");
                     Console.WriteLine(s);
-                    Console.WriteLine("   Votre saisie est incorrecte");
+                    Console.WriteLine("\t Votre saisie est incorrecte");
                     Console.WriteLine(Environment.NewLine);
-                    Console.WriteLine("   Voulez-vous effectuer une autre analyse (O/N)");
+                    Console.WriteLine("\t Voulez-vous effectuer une autre analyse (O/N)");
                     s = Console.ReadKey().Key;
                 }
                 Console.Clear();
@@ -171,12 +193,12 @@ namespace M_Exercices_Algorithmie_Codage_TP6
             while (s == ConsoleKey.O);
 
             Console.WriteLine(Environment.NewLine);
-            Console.WriteLine("\t Au revoir et à bientôt.");
+            Console.WriteLine("\t Merci d'avoir utilisé notre logiciel.");
             Console.WriteLine("\t (pressez une touche pour quitter)");
             Console.ReadKey();
         }
         
-        static string ConversionJour (string j)
+        static string Jour(string j)
         {
             // Convertit cet indice de jour de la 
             // semaine en son équivalent en toutes lettres
@@ -192,7 +214,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
             }
         }
 
-        static string ConversionMois(string m)
+        static string Mois(string m)
         {
             // Convertit cet indice de jour de la 
             // semaine en son équivalent en toutes lettres
