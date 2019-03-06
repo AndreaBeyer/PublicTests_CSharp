@@ -6,22 +6,6 @@ using System.Threading.Tasks;
 
 namespace M_Exercices_Algorithmie_Codage_TP6
 {
-    /* 
-        \' for a Single Quote
-        \" for a Double Quote
-        \\ for a Backslash
-        \n for a New Line
-        \r for a Carriage Return
-        \b for a Backspace
-        \f for a Form Feed
-        \0 for a Null Character
-        \a for an Alert Character
-        \t for a Horizontal Tab
-        \v for a Vertical Tab
-        \x# for (the hex value of) Unicode Characters (Exemple: \x20).
-        \U######## for (the hex value of) Unicode Characters, Supporting the generation of Surrogates
-    */
-
     class Program
     {
         // Déclarations publiques
@@ -30,8 +14,6 @@ namespace M_Exercices_Algorithmie_Codage_TP6
         // Procédure principale
         static void Main(string[] args)
         {
-            // A DEBUGER !!! //
-            
             // Déclarations
             ConsoleKey s = ConsoleKey.O;
             string moisChoisi;
@@ -77,6 +59,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                     if (String.IsNullOrEmpty(numCli))
                     {
                         Console.WriteLine("\t Ce client n'existe pas !");
+                        Console.WriteLine();
                     }
                 }
                 while (String.IsNullOrEmpty(numCli));
@@ -105,7 +88,8 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         // Si le jour choisi est le jour de la semaine interdit,
                         if (Jour(saisie) == jourInterdit)
                         {
-                            Console.WriteLine("   On ne peut livrer chez {0} le {1}. Veuillez chosir un autre jour.",
+                            Console.WriteLine("   On ne peut livrer chez {0} le {1}." + Environment.NewLine +
+                                "   Veuillez chosir un autre jour.",
                                 nomCli, jourInterdit);
                         }
                         // Si le jour saisi n'a pas été renseigné,
@@ -122,9 +106,10 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         else
                         {
                             // S'il y a un jour interdit, mais que le jour choisi est différent,
-                            Console.WriteLine("   On peut livrer chez {0} le {1} (NB: Ce n'est pas possible le {2}.)",
+                            Console.WriteLine("   On peut livrer chez {0} le {1}." + Environment.NewLine +
+                                "   (NB: Ce n'est pas possible le {2}.)",
                                 nomCli, Jour(saisie), jourInterdit);
-                            Console.WriteLine(Environment.NewLine);
+                            Console.WriteLine();
                             jourChoisi = Jour(saisie);
                         }
                     }
@@ -132,6 +117,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                     else
                     {
                         Console.WriteLine("   L'indice du jour de la semaine ne peut aller que 1 à 6.");
+                        Console.WriteLine();
                     }
                 }
                 while (!int.TryParse(saisie, out int indiceJourBis) || indiceJourBis < 1 || indiceJourBis > 6 || Jour(saisie) == jourInterdit);
@@ -159,8 +145,10 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         // Si le mois choisi est le mois interdit,
                         if (Mois(saisie) == moisInterdit)
                         {
-                            Console.WriteLine("   On ne peut livrer chez {0} en {1}. Veuillez chosir un autre mois.",
+                            Console.WriteLine("   On ne peut livrer chez {0} en {1}." + Environment.NewLine +
+                                "   Veuillez chosir un autre mois.",
                                 nomCli, moisInterdit);
+                            Console.WriteLine();
                         }
                         // Si le mois saisi n'a pas été renseigné,
                         else if (String.IsNullOrEmpty(Mois(saisie)))
@@ -173,7 +161,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                             Console.WriteLine("   On peut livrer chez {0} tous les mois.");
                             moisChoisi = Mois(saisie);
 
-                            Console.WriteLine(Environment.NewLine);
+                            Console.WriteLine(Environment.NewLine); // NB: ceci va deux fois à la ligne => saut de ligne
                             Console.WriteLine("\t === Vous pourrez livrer {0} un {1} en {2}. === ",
                                 nomCli, jourChoisi, moisChoisi);
                             Console.WriteLine(Environment.NewLine); // NB: ceci va deux fois à la ligne => saut de ligne
@@ -181,8 +169,10 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                         // S'il y a un mois interdit, mais que le mois choisi est différent,
                         else
                         {
-                            Console.WriteLine("   On peut livrer chez {0} en {1} (NB: Ce n'est pas possible en {2}.)",
+                            Console.WriteLine("   On peut livrer chez {0} en {1}." +Environment.NewLine+
+                                "   (NB: Ce n'est pas possible en {2}.)",
                                 nomCli, Mois(saisie), moisInterdit);
+                            Console.WriteLine();
 
                             moisChoisi = Mois(saisie);
                             Console.WriteLine(Environment.NewLine); // NB: ceci va deux fois à la ligne => saut de ligne
@@ -239,9 +229,8 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                     default: return "";
                 }
             }
-            else
-            {
-                return "ERREUR";
+            else {
+                return "";
             }
         }
 
@@ -268,9 +257,8 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                     default: return "";
                 }
             }
-            else
-            {
-                return "ERREUR";
+            else {
+                return "";
             }
         }
     }

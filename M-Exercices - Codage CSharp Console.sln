@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_REFERENCE (Exemple 2 vu en salle)", "_REFERENCE (Exemple 2 vu en salle)\_REFERENCE (Exemple 2 vu en salle).csproj", "{87F879F5-96E0-46EF-BD6F-966E0A201EDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP1)", "M-Exercices - Codage CSharp Console (TP1)\M-Exercices - Algorithmie - Codage (TP1).csproj", "{280DDFA5-9284-4B65-A1B8-AC4F06FA5E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP2)", "M-Exercices - Codage CSharp Console (TP2)\M-Exercices - Algorithmie - Codage (TP2).csproj", "{4F848045-0CF0-4777-B9CD-FB75126F5277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP3)", "M-Exercices - Codage CSharp Console (TP3)\M-Exercices - Algorithmie - Codage (TP3).csproj", "{33A0580C-57BB-40F8-B59A-7BB371ABF0FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP4)", "M-Exercices - Codage CSharp Console (TP4)\M-Exercices - Algorithmie - Codage (TP4).csproj", "{9185FC60-8A67-4D84-84A3-EAB5B012BC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP5)", "M-Exercices - Codage CSharp Console (TP5)\M-Exercices - Algorithmie - Codage (TP5).csproj", "{CC0EB562-5EBA-4B52-9CCC-C8D07CB4DF7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP6)", "M-Exercices - Codage CSharp Console (TP6)\M-Exercices - Algorithmie - Codage (TP6).csproj", "{4F49F382-086D-4CBC-BAD6-506FE614A2F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-Exercices - Algorithmie - Codage (TP6) Tests Avancés", "M-Exercices - Codage CSharp Console (TP6) Tests Avancés\M-Exercices - Algorithmie - Codage (TP6) Tests Avancés.csproj", "{2AA5734E-635D-44B9-8F74-6CE12825A13E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N-Exercices_CSharp_WindowsForm", "N-Exercices_CSharp_WindowsForm\N-Exercices_CSharp_WindowsForm.csproj", "{CBAE89DC-42D5-4F6A-ADDB-5909366227A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87F879F5-96E0-46EF-BD6F-966E0A201EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F879F5-96E0-46EF-BD6F-966E0A201EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F879F5-96E0-46EF-BD6F-966E0A201EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F879F5-96E0-46EF-BD6F-966E0A201EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280DDFA5-9284-4B65-A1B8-AC4F06FA5E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280DDFA5-9284-4B65-A1B8-AC4F06FA5E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280DDFA5-9284-4B65-A1B8-AC4F06FA5E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280DDFA5-9284-4B65-A1B8-AC4F06FA5E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F848045-0CF0-4777-B9CD-FB75126F5277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F848045-0CF0-4777-B9CD-FB75126F5277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F848045-0CF0-4777-B9CD-FB75126F5277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F848045-0CF0-4777-B9CD-FB75126F5277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A0580C-57BB-40F8-B59A-7BB371ABF0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A0580C-57BB-40F8-B59A-7BB371ABF0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A0580C-57BB-40F8-B59A-7BB371ABF0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A0580C-57BB-40F8-B59A-7BB371ABF0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9185FC60-8A67-4D84-84A3-EAB5B012BC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9185FC60-8A67-4D84-84A3-EAB5B012BC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9185FC60-8A67-4D84-84A3-EAB5B012BC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9185FC60-8A67-4D84-84A3-EAB5B012BC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC0EB562-5EBA-4B52-9CCC-C8D07CB4DF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0EB562-5EBA-4B52-9CCC-C8D07CB4DF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0EB562-5EBA-4B52-9CCC-C8D07CB4DF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0EB562-5EBA-4B52-9CCC-C8D07CB4DF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F49F382-086D-4CBC-BAD6-506FE614A2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F49F382-086D-4CBC-BAD6-506FE614A2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F49F382-086D-4CBC-BAD6-506FE614A2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F49F382-086D-4CBC-BAD6-506FE614A2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA5734E-635D-44B9-8F74-6CE12825A13E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBAE89DC-42D5-4F6A-ADDB-5909366227A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAE89DC-42D5-4F6A-ADDB-5909366227A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAE89DC-42D5-4F6A-ADDB-5909366227A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAE89DC-42D5-4F6A-ADDB-5909366227A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5BC2A8F-C2AD-4DB2-809D-D61185305571}
+	EndGlobalSection
+EndGlobal
