@@ -15,7 +15,7 @@ namespace M_Exercices___Algorithmie___Codage__TP3_
             ConsoleKey s = ConsoleKey.N;
 
             /* Il semble y avoir une faute dans l'orthographe du mot "fareinheit" (normalement "fahrenheit"). */
-            Console.Title = "Conversion de degrés celsius en degrés fareinheit".ToUpper();
+            Console.Title = " 3 • Conversion de degrés celsius en degrés fareinheit".ToUpper();
             Console.WriteLine();
             
             do

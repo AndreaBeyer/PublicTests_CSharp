@@ -34,7 +34,7 @@ namespace M_Exercices_Algorithmie_Codage_TP6
                 tMois = tFichier[3].Split(',');
 
                 // Mise en forme de l'interface
-                Console.Title = "Controle des possibilités de livraisons".ToUpper();
+                Console.Title = " 6 • Controle des possibilités de livraisons".ToUpper();
                 Console.WindowWidth = 110;
                 Console.WindowHeight = 15;
                 Console.ForegroundColor = ConsoleColor.Cyan;

@@ -16,7 +16,7 @@ namespace M_Exercices___Algorithmie___Codage__TP5_
             ConsoleKey s = ConsoleKey.O;
             System.Text.RegularExpressions.MatchCollection occurences;
 
-            Console.Title = "Analyse lexicale d'une chaîne de caractères".ToUpper();
+            Console.Title = " 5 • Analyse lexicale d'une chaîne de caractères".ToUpper();
             do
             {
                 Console.Clear();

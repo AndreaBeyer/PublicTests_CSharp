@@ -16,7 +16,7 @@ namespace M_Exercices___Algorithmie___Codage_TP1_
 
             do
             {
-                Console.Title = "Calcul d'un cercle".ToUpper();
+                Console.Title = " 1 • Calcul d'un cercle".ToUpper();
 
                 do
                 {

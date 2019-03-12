@@ -18,7 +18,7 @@ namespace M_Exercices___Algorithmie___Codage_TP2_
             ConsoleKey s = ConsoleKey.O;
 
             // Configuration de la console
-            Console.Title = "Racine de l'équation du 2ème degré".ToUpper();
+            Console.Title = " 2 • Racine de l'équation du 2ème degré".ToUpper();
             Console.WriteLine("y = ax² + bx + c" + Environment.NewLine);
             
             do
